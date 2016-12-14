@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ayberk.busreservationsystem.MainActivity"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/roadimage"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+
+            <ImageView
+                android:layout_width="79dp"
+                android:layout_height="85dp"
+                android:background="@drawable/fefe"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:id="@+id/imageView2"
+                />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:textSize="14dp"
+                android:letterSpacing="0.1"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="100dp"
+                android:textColorHint="#9E9EAA"
+                android:background="#00000000"
+                android:textColor="#9E9EAA"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.001dp"
+                android:background="#5B5B65"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/editPass"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:textSize="14dp"
+                    android:letterSpacing="0.1"
+                    android:inputType="textPassword"
+                    android:textColor="#9E9EAA"
+                    android:textColorHint="#9E9EAA"
+                    android:background="#00000000"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="40dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.001dp"
+                android:background="#5B5B65"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign In"
+                android:textSize="14dp"
+                android:letterSpacing="0.1"
+                android:textColor="#ececf1"
+                android:background="@drawable/rounded"
+                android:gravity="center"
+                android:padding="17dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:id="@+id/signIn"
+                android:onClick="login"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continue Without Login"
+                android:textSize="14dp"
+                android:letterSpacing="0.1"
+                android:textColor="#ececf1"
+                android:onClick="showBusesPage"
+                android:background="@drawable/showbus"
+                android:gravity="center"
+                android:padding="17dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/showBuses"
+                android:layout_weight="0.05" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/createAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create Account"
+                    android:textColor="#8E8E9A"
+                    android:textSize="14dp"
+                    android:letterSpacing="0.1"
+                    android:layout_marginTop="0.1dp"
+                    android:onClick="createAccount"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
+
+
+
+
+
