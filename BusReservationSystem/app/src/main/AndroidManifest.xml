@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ayberk.busreservationsystem">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/fefe"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.INTERNET" />
+
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+            <activity android:name=".CreateAccount" />
+        </activity>
+        <activity android:name=".SeatSelection" />
+        <activity android:name=".BusPage" />
+        <activity android:name=".CreateAnAccount" />
+        <activity android:name=".ListTravel" />
+        <activity android:name=".BuyTicket" />
+        <activity android:name=".ShowBoughtTicket"></activity>
+    </application>
+
+</manifest>
