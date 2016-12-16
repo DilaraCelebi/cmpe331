@@ -74,4 +74,17 @@ public class Travel {
     public void setDay(int day) {
         this.day = day;
     }
+
+    @Override
+    public String toString() {
+        return "Travel{" +
+                "destinationCity='" + destinationCity + '\'' +
+                ", originCity='" + originCity + '\'' +
+                ", time='" + time + '\'' +
+                ", price=" + price +
+                ", year=" + year +
+                ", month=" + month +
+                ", day=" + day +
+                '}';
+    }
 }

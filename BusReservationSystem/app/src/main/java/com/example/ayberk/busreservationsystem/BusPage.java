@@ -1,6 +1,6 @@
 package com.example.ayberk.busreservationsystem;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -19,9 +19,14 @@ public class BusPage extends Activity {
     EditText date;
     DatePickerDialog datePickerDialog;
     Spinner origin,destination;
-    String selectedCity;
-
-
+    public static String selectedOrigin;
+    public static int mYear;
+    public static int mMonth;
+    public static int mDay;
+    public static int sYear;
+    public static int sMonth;
+    public static int sDay;
+    public static String selectedDestination;
 
     List<String> originValues=Arrays.asList("Istanbul","Ankara", "Bolu", "İzmir", "Kocaeli", "Eskişehir", "Nevşehir", "Antalya","Muğla");
     List<String> destinationValues=Arrays.asList("Istanbul","Ankara", "Bolu", "İzmir", "Kocaeli", "Eskişehir", "Nevşehir", "Antalya","Muğla");
@@ -47,9 +52,9 @@ public class BusPage extends Activity {
             public void onClick(View v) {
                 // calender class's instance and get current date , month and year from calender
                 final Calendar c = Calendar.getInstance();
-                int mYear = c.get(Calendar.YEAR); // current year
-                int mMonth = c.get(Calendar.MONTH); // current month
-                int mDay = c.get(Calendar.DAY_OF_MONTH); // current day
+                mYear = c.get(Calendar.YEAR); // current year
+                mMonth = c.get(Calendar.MONTH); // current month
+                mDay = c.get(Calendar.DAY_OF_MONTH); // current day
                 // date picker dialog
                 datePickerDialog = new DatePickerDialog(BusPage.this,
                         new DatePickerDialog.OnDateSetListener() {
@@ -60,6 +65,9 @@ public class BusPage extends Activity {
                                 // set day of month , month and year value in the edit text
                                 date.setText(dayOfMonth + "/"
                                         + (monthOfYear + 1) + "/" + year);
+                                sDay=dayOfMonth;
+                                sMonth=monthOfYear;
+                                sYear=year;
 
                             }
                         }, mYear, mMonth, mDay);
@@ -80,7 +88,7 @@ public class BusPage extends Activity {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
 
-                selectedCity =origin.getSelectedItem().toString();
+                selectedOrigin =origin.getSelectedItem().toString();
 
                 if(origin.getSelectedItem() == "Origin")
                 {
@@ -116,7 +124,8 @@ public class BusPage extends Activity {
                                        int position, long id) {
                 // TODO Auto-generated method stub
 
-                if(destination.getSelectedItem().toString().equals(selectedCity)){
+               selectedDestination= destination.getSelectedItem().toString();
+                if(destination.getSelectedItem().toString().equals(selectedOrigin)){
                     Toast.makeText(BusPage.this, "You can not choose the same city ", Toast.LENGTH_LONG).show();
                 }
 
@@ -133,6 +142,11 @@ public class BusPage extends Activity {
 
 
 
+    }
+    public  void searchBusButton(View v){
+
+        Intent intent = new Intent(this, ListTravel.class);
+        startActivity(intent);
     }
 
 

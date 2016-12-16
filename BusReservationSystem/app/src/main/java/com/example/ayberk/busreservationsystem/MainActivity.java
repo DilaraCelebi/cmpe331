@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
     public static HashMap<String, String> accounts = new HashMap<String, String>();
     public static ArrayList accountList= new ArrayList();
     Integer loginCounter=0;
+    public static boolean isLoginTrue =false;
     StringBuffer buf = new StringBuffer();
     static final int READ_BLOCK_SIZE = 100;
 
@@ -57,25 +58,32 @@ public class MainActivity extends Activity {
         ReadData();
 
     }
-
+    boolean accountCheck=false;
     public void login(View v){
         int id=999;
         String name= editName.getText().toString();
         String password= editPass.getText().toString();
 
+
         for (int i=0;i<Accounts.size();i++){
             if (Accounts.get(i).getName().equals(name)){
                 id=i;
+                accountCheck=true;
 
             }
 
         }
-        if(loginCounter<3){
+
+       if(loginCounter<3 ){
 
         if(name.equals("") || password.equals("")){
             Toast.makeText(getBaseContext(), "Fill the Details!", Toast.LENGTH_LONG).show();
 
         }
+        else if (accountCheck==false){
+                Toast.makeText(getBaseContext(), "Unsaved Account", Toast.LENGTH_LONG).show();
+
+            }
         /*else if ( accounts.get(name)==null){
 
             Toast.makeText(getBaseContext(), "There is no any account with this name", Toast.LENGTH_LONG).show();
@@ -86,6 +94,7 @@ public class MainActivity extends Activity {
 
             //intent ile otobus sayfasına baglanılacak...............................
             Toast.makeText(getBaseContext(), "Welcome", Toast.LENGTH_LONG).show();
+            isLoginTrue=true;
         }
         else if(!Accounts.get(id).getPass().equals(password)){
             Toast.makeText(getBaseContext(), "Wrong Password,Try Again", Toast.LENGTH_LONG).show();

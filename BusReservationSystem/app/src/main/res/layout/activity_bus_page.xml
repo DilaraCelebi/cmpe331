@@ -32,7 +32,8 @@
         android:padding="17dp"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
-        android:textSize="17sp"/>
+        android:textSize="17sp"
+        android:onClick="searchBusButton"/>
 
     <Spinner
             android:layout_width="match_parent"

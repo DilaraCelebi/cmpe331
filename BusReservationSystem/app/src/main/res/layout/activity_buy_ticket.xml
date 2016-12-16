@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_buy_ticket"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ayberk.busreservationsystem.BuyTicket"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        app:srcCompat="@drawable/kredi"
+        android:id="@+id/imageView3"
+        android:layout_weight="0.21" />
+
+    <TextView
+        android:text="Origin:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textOrigin"
+        android:layout_marginBottom="8dp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Destination:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textDesti"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Time:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textTime"
+        android:textStyle="normal|bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:text="Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textDate"
+        android:layout_marginBottom="8dp"
+        android:textStyle="normal|bold" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="0.36"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="77dp"
+            app:srcCompat="@drawable/ticket2"
+            android:id="@+id/imageView4"
+            android:layout_weight="0.17" />
+
+        <TextView
+            android:text="X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCross"
+            android:layout_weight="0.25"
+            android:layout_marginTop="30dp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="Price:"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textPrice"
+            android:layout_marginBottom="8dp"
+            android:textStyle="normal|bold"
+            android:layout_weight="0.03"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="37dp">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/rgCard"
+
+            >
+
+
+            <RadioButton
+                android:text="MasterCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButtonMaster"
+                android:layout_weight="1"
+                android:checked="true"  />
+
+            <RadioButton
+                android:text="VisaCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButtonVisa"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:id="@+id/layMaster">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            app:srcCompat="@drawable/mastercarddd"
+            android:id="@+id/masterCard"
+            android:layout_weight="0.06"
+            android:layout_marginTop="10dp"/>
+
+
+        <EditText
+
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textMaster"
+            android:layout_marginBottom="8dp"
+            android:textStyle="normal|bold"
+            android:layout_weight="0.89"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            app:srcCompat="@drawable/visaaa"
+            android:id="@+id/visaCard"
+            android:layout_weight="0.23"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"/>
+
+
+        <EditText
+
+
+            android:layout_width="254dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/visaCardEdit"
+            android:layout_marginBottom="8dp"
+            android:textStyle="normal|bold"
+            android:visibility="invisible"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="103dp"
+            android:layout_height="38dp"
+            android:text="Valid THRU: "
+            android:id="@+id/editText"
+            android:paddingBottom="10dp"
+            android:contextClickable="true"
+            android:layout_gravity="bottom"
+            android:gravity="bottom" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint=" day/Year"
+            android:id="@+id/valid"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="BUY"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSearch"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/spDest"
+            android:background="@drawable/rounded"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textStyle="normal|bold"
+            android:padding="17dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="17sp"
+            android:onClick="buyTicketPay"
+            />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

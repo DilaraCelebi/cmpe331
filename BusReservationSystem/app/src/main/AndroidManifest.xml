@@ -10,6 +10,7 @@
         android:theme="@style/AppTheme">
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +23,10 @@
         </activity>
         <activity android:name=".SeatSelection" />
         <activity android:name=".BusPage" />
-        <activity android:name=".BusList" />
-
-        <activity android:name=".CreateAnAccount"></activity>
+        <activity android:name=".CreateAnAccount" />
+        <activity android:name=".ListTravel" />
+        <activity android:name=".BuyTicket" />
+        <activity android:name=".ShowBoughtTicket"></activity>
     </application>
 
 </manifest>
